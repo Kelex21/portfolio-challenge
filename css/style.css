@@ -67,9 +67,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; /* Opcional */
     height: 100vh;
-    background: linear-gradient(40deg, rgb(33, 33, 36, .95), rgba(20, 20, 22, 0.9), var(--background));
+    background: linear-gradient(40deg, rgb(33, 33, 36, .85), rgba(20, 20, 22, 0.9), rgb(20, 20, 22, 1));
 }
 
 .welcome-section h1 {
@@ -79,8 +79,64 @@ body {
 }
 
 .welcome-section p {
+    margin-top: 10px;
     font-size: 30px;
     font-weight: 300;
     font-style: italic;
     color: var(--color-red);
 }
+
+.projects-section {
+    background-color: var(--color-projects);
+    width: 100%; /* opcional */
+    height: 150vh; /* Opcional */
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.projects-section h2 {
+    font-family: var(--font2);
+    font-size: 42px;
+    font-weight: 700;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 2px solid var(--color-text);
+
+}
+
+.projects-section .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project {
+    background-color: var(--background);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    border-radius: 2px;
+}
+
+.project img {
+    width: 100%;
+    height: calc(100% - 6.8rem);
+    object-fit: cover;
+}
+
+.project .project-title {
+    font-size: 2.2rem;
+    padding: 2rem 0.5rem;
+}
+
+.project .project-title .code {
+    color: var(--background);
+    transition: color .3s ease-out;
+}
+
+.project .project-title .code:hover {
+    color: orangered;
+}
+
